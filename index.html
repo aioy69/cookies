@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Печенье с предсказаниями</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fff8f0;
+      text-align: center;
+      padding: 50px;
+    }
+    h1 { color: #d2691e; }
+    .cookie {
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+    }
+    .cookie img {
+      width: 200px;
+      transition: transform 0.6s ease-in-out;
+    }
+    .cookie.split #whole { display: none; }
+    .cookie.split #left {
+      position: absolute;
+      left: 50px;
+      transform: translateX(-120px);
+    }
+    .cookie.split #right {
+      position: absolute;
+      right: 50px;
+      transform: translateX(120px);
+    }
+    #fortune {
+      margin-top: 30px;
+      font-size: 20px;
+      color: #333;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+    #fortune.show { opacity: 1; }
+  </style>
+</head>
+<body>
+  <h1>Печенье с предсказаниями</h1>
+  <div class="cookie" id="cookie">
+    <img id="whole" src="cookie-whole.png" alt="Целое печенье">
+    <img id="left" src="cookie-left.png" alt="Левая половинка" style="display:none;">
+    <img id="right" src="cookie-right.png" alt="Правая половинка" style="display:none;">
+  </div>
+  <p id="fortune"></p>
+
+  <script>
+    const cookie = document.getElementById('cookie');
+    const whole = document.getElementById('whole');
+    const left = document.getElementById('left');
+    const right = document.getElementById('right');
+    const fortuneText = document.getElementById('fortune');
+
+    const fortunes = [
+      "Скоро в вашей жизни начнется новая глава.",
+      "Улыбка откроет перед вами новые двери.",
+      "Сегодня идеальный день для смелых решений.",
+      "Вас ждёт приятный сюрприз.",
+      "Ваши идеи принесут успех.",
+      "Любовь ближе, чем вы думаете.",
+      "Фортуна улыбается вам.",
+      "В скором времени исполнится ваше желание.",
+      "Доверяйте своей интуиции.",
+      "Сегодня вы сделаете важный шаг к мечте."
+    ];
+
+    cookie.addEventListener('click', () => {
+      whole.style.display = 'none';
+      left.style.display = 'inline';
+      right.style.display = 'inline';
+      cookie.classList.add('split');
+      const randomFortune = fortunes[Math.floor(Math.random() * fortunes.length)];
+      fortuneText.textContent = randomFortune;
+      fortuneText.classList.add('show');
+    });
+  </script>
+</body>
+</html>
