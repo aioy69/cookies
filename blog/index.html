@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5.0, user-scalable=yes">
+  <title>Статьи о финансах, успехе и предсказаниях 🥠 – Блог Pechenie-Sudby.ru</title>
+  <meta name="description" content="Полезные статьи о финансах, успехе, любви, работе, здоровье и мудрости. Узнайте, как предсказания могут помочь в разных сферах жизни.">
+  <meta name="keywords" content="статьи о финансах, успех в работе, предсказания о любви, здоровый образ жизни, мудрые советы, удача в бизнесе">
+  
+  <!-- Canonical -->
+  <link rel="canonical" href="https://pechenie-sudby.ru/blog/" />
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Статьи о финансах, успехе и предсказаниях 🥠" />
+  <meta property="og:description" content="Полезные статьи о финансах, успехе, любви, работе, здоровье и мудрости." />
+  <meta property="og:image" content="https://pechenie-sudby.ru/og-image-blog.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://pechenie-sudby.ru/blog/" />
+
+  <style>
+    :root {
+      --primary-color: #d28e36;
+      --secondary-color: #fffdf8;
+      --text-color: #2e2a24;
+      --light-gray: #f0f0f0;
+      --dark-bg: #3a2c1a;
+      --dark-text: #f0e6d2;
+      --finance-color: #4caf50;
+      --love-color: #e91e63;
+      --work-color: #2196f3;
+      --health-color: #009688;
+      --luck-color: #ff9800;
+      --mood-color: #9c27b0;
+      --wisdom-color: #607d8b;
+    }
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.6;
+      background: var(--secondary-color);
+      color: var(--text-color);
+      padding: 0;
+      margin: 0;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+    
+    body.dark-theme {
+      background: var(--dark-bg);
+      color: var(--dark-text);
+    }
+    
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    
+    /* Header Styles */
+    .blog-header {
+      text-align: center;
+      margin-bottom: 40px;
+      padding: 40px 20px;
+      background: linear-gradient(135deg, rgba(210, 142, 54, 0.1) 0%, rgba(255, 253, 248, 0.8) 100%);
+      border-radius: 12px;
+    }
+    
+    .dark-theme .blog-header {
+      background: linear-gradient(135deg, rgba(210, 142, 54, 0.2) 0%, rgba(58, 44, 26, 0.8) 100%);
+    }
+    
+    .blog-header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      color: var(--primary-color);
+    }
+    
+    .blog-header p {
+      font-size: 1.1rem;
+      opacity: 0.8;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
+    /* Navigation */
+    .blog-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+    
+    .dark-theme .blog-nav {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .home-link {
+      display: inline-flex;
+      align-items: center;
+      padding: 10px 16px;
+      background: var(--primary-color);
+      color: white;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: background 0.3s ease;
+    }
+    
+    .home-link:hover {
+      background: #bf7d2d;
+    }
+    
+    .theme-toggle {
+      background: rgba(255, 255, 255, 0.8);
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: 50%;
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+    
+    .dark-theme .theme-toggle {
+      background: rgba(58, 44, 26, 0.8);
+      border-color: rgba(92, 67, 34, 0.5);
+    }
+    
+    /* Categories */
+    .categories {
+      margin-bottom: 30px;
+    }
+    
+    .categories h2 {
+      margin-bottom: 15px;
+      color: var(--primary-color);
+      text-align: center;
+    }
+    
+    .category-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+    
+    .category {
+      padding: 10px 20px;
+      background: #fff8ea;
+      border-radius: 25px;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: 1px solid transparent;
+    }
+    
+    .dark-theme .category {
+      background: #5c4322;
+    }
+    
+    .category:hover, .category.active {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .category.finance {
+      background: rgba(76, 175, 80, 0.1);
+      border-color: var(--finance-color);
+      color: var(--finance-color);
+    }
+    
+    .category.love {
+      background: rgba(233, 30, 99, 0.1);
+      border-color: var(--love-color);
+      color: var(--love-color);
+    }
+    
+    .category.work {
+      background: rgba(33, 150, 243, 0.1);
+      border-color: var(--work-color);
+      color: var(--work-color);
+    }
+    
+    .category.health {
+      background: rgba(0, 150, 136, 0.1);
+      border-color: var(--health-color);
+      color: var(--health-color);
+    }
+    
+    .category.luck {
+      background: rgba(255, 152, 0, 0.1);
+      border-color: var(--luck-color);
+      color: var(--luck-color);
+    }
+    
+    .category.mood {
+      background: rgba(156, 39, 176, 0.1);
+      border-color: var(--mood-color);
+      color: var(--mood-color);
+    }
+    
+    .category.wisdom {
+      background: rgba(96, 125, 139, 0.1);
+      border-color: var(--wisdom-color);
+      color: var(--wisdom-color);
+    }
+    
+    /* Blog Grid */
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 25px;
+      margin-bottom: 40px;
+    }
+    
+    .blog-card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+    }
+    
+    .dark-theme .blog-card {
+      background: #2a2a2a;
+    }
+    
+    .blog-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    }
+    
+    .category-badge {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      padding: 5px 12px;
+      border-radius: 15px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      z-index: 2;
+    }
+    
+    .badge-finance {
+      background: var(--finance-color);
+      color: white;
+    }
+    
+    .badge-love {
+      background: var(--love-color);
+      color: white;
+    }
+    
+    .badge-work {
+      background: var(--work-color);
+      color: white;
+    }
+    
+    .badge-health {
+      background: var(--health-color);
+      color: white;
+    }
+    
+    .badge-luck {
+      background: var(--luck-color);
+      color: white;
+    }
+    
+    .badge-mood {
+      background: var(--mood-color);
+      color: white;
+    }
+    
+    .badge-wisdom {
+      background: var(--wisdom-color);
+      color: white;
+    }
+    
+    .blog-card-image {
+      height: 180px;
+      background-color: #f5e5c6;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+    }
+    
+    .dark-theme .blog-card-image {
+      background-color: #5c4322;
+    }
+    
+    .blog-card-content {
+      padding: 20px;
+    }
+    
+    .blog-card h2 {
+      margin-top: 0;
+      font-size: 1.3rem;
+      color: var(--primary-color);
+      margin-bottom: 10px;
+    }
+    
+    .blog-meta {
+      font-size: 0.85rem;
+      color: #777;
+      margin-bottom: 12px;
+    }
+    
+    .dark-theme .blog-meta {
+      color: #aaa;
+    }
+    
+    .blog-excerpt {
+      margin-bottom: 15px;
+      color: #555;
+    }
+    
+    .dark-theme .blog-excerpt {
+      color: #ccc;
+    }
+    
+    .read-more {
+      display: inline-block;
+      color: var(--primary-color);
+      font-weight: 500;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.3s ease;
+    }
+    
+    .read-more:hover {
+      border-bottom-color: var(--primary-color);
+    }
+    
+    /* Footer */
+    .blog-footer {
+      text-align: center;
+      margin-top: 50px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+    }
+    
+    .dark-theme .blog-footer {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .blog-footer p {
+      margin-bottom: 10px;
+      opacity: 0.7;
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .blog-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .blog-header h1 {
+        font-size: 2rem;
+      }
+      
+      .blog-header {
+        padding: 30px 15px;
+      }
+      
+      .category-list {
+        justify-content: flex-start;
+        overflow-x: auto;
+        padding-bottom: 10px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .container {
+        padding: 15px;
+      }
+      
+      .blog-header h1 {
+        font-size: 1.8rem;
+      }
+      
+      .blog-card-content {
+        padding: 15px;
+      }
+      
+      .blog-card h2 {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <nav class="blog-nav">
+      <a href="/" class="home-link">← На главную</a>
+      <div class="theme-toggle" id="themeToggle">🌙</div>
+    </nav>
+
+    <header class="blog-header">
+      <h1>🥠 Статьи о предсказаниях</h1>
+      <p>Полезные материалы о финансах, успехе, любви, работе, здоровье и мудрости</p>
+    </header>
+
+    <section class="categories">
+      <h2>Категории статей</h2>
+      <div class="category-list">
+        <div class="category active">Все статьи</div>
+        <div class="category finance">Финансы</div>
+        <div class="category love">Любовь</div>
+        <div class="category work">Работа</div>
+        <div class="category health">Здоровье</div>
+        <div class="category luck">Удача</div>
+        <div class="category mood">Настроение</div>
+        <div class="category wisdom">Мудрость</div>
+      </div>
+    </section>
+
+    <div class="blog-grid">
+      <!-- Финансы -->
+      <article class="blog-card" data-category="finance">
+        <div class="category-badge badge-finance">Финансы</div>
+        <div class="blog-card-image">💰</div>
+        <div class="blog-card-content">
+          <h2><a href="/blog/finansovye-predskazaniya" style="color: inherit; text-decoration: none;">Финансовые предсказания: как привлечь богатство</a></h2>
+          <div class="blog-meta">Опубликовано: 25 августа 2025 • Автор: Pechenie-Sudby.ru</div>
+          <p class="blog-excerpt">Узнайте, как финансовые предсказания могут помочь в достижении материального благополучия и какие привычки привлекают богатство.</p>
+          <a href="/blog/finansovye-predskazaniya" class="read-more">Читать далее →</a>
+        </div>
+      </article>
+
+      <!-- Любовь -->
+      <article class="blog-card" data-category="love">
+        <div class="category-badge badge-love">Любовь</div>
+        <div class="blog-card-image">❤️</div>
+        <div class="blog-card-content">
+          <h2><a href="/blog/lubovnye-predskazaniya" style="color: inherit; text-decoration: none;">Любовные предсказания: найти и сохранить отношения</a></h2>
+          <div class="blog-meta">Опубликовано: 22 августа 2025 • Автор: Pechenie-Sudby.ru</div>
+          <p class="blog-excerpt">Как предсказания о любви могут помочь в поиске партнера и укреплении отношений. Советы по гармонизации личной жизни.</p>
+          <a href="/blog/lubovnye-predskazaniya" class="read-more">Читать далее →</a>
+        </div>
+      </article>
+
+      <!-- Работа -->
+      <article class="blog-card" data-category="work">
+        <div class="category-badge badge-work">Работа</div>
+        <div class="blog-card-image">💼</div>
+        <div class="blog-card-content">
+          <h2><a href="/blog/predskazaniya-o-karere" style="color: inherit; text-decoration: none;">Карьерные предсказания: путь к профессиональному успеху</a></h2>
+          <div class="blog-meta">Опубликовано: 20 августа 2025 • Автор: Pechenie-Sudby.ru</div>
+          <p class="blog-excerpt">Как предсказания о работе могут помочь в карьерном росте, смене профессии или открытии собственного бизнеса.</p>
+          <a href="/blog/predskazaniya-o-karere" class="read-more">Читать далее →</a>
+        </div>
+      </article>
+
+      <!-- Здоровье -->
+      <article class="blog-card" data-category="health">
+        <div class="category-badge badge-health">Здоровье</div>
+        <div class="blog-card-image">🧘</div>
+        <div class="blog-card-content">
+          <h2><a href="/blog/predskazaniya-o-zdorove" style="color: inherit; text-decoration: none;">Предсказания о здоровье: баланс тела и разума</a></h2>
+          <div class="blog-meta">Опубликовано: 18 августа 2025 • Автор: Pechenie-Sudby.ru</div>
+          <p class="blog-excerpt">Как предсказания о здоровье могут мотивировать к ведению здорового образа жизни и заботе о своем благополучии.</p>
+          <a href="/blog/predskazaniya-o-zdorove" class="read-more">Читать далее →</a>
+        </div>
+      </article>
+
+      <!-- Удача -->
+      <article class="blog-card" data-category="luck">
+        <div class="category-badge badge-luck">Удача</div>
+        <div class="blog-card-image">🍀</div>
+        <div class="blog-card-content">
+          <h2><a href="/blog/predskazaniya-ob-udache" style="color: inherit; text-decoration: none;">Предсказания об удаче: как привлечь везение</a></h2>
+          <div class="blog-meta">Опубликовано: 15 августа 2025 • Автор: Pechenie-Sudby.ru</div>
+          <p class="blog-excerpt">Узнайте, как предсказания об удаче могут помочь в достижении целей и какие ритуалы привлекают успех в вашу жизнь.</p>
+          <a href="/blog/predskazaniya-ob-udache" class="read-more">Читать далее →</a>
+        </div>
+      </article>
+
+      <!-- Настроение -->
+      <article class="blog-card" data-category="mood">
+        <div class="category-badge badge-mood">Настроение</div>
+        <div class="blog-card-image">😊</div>
+        <div class="blog-card-content">
+          <h2><a href="/blog/predskazaniya-o-nastroenii" style="color: inherit; text-decoration: none;">Предсказания о настроении: как сохранить позитив</a></h2>
+          <div class="blog-meta">Опубликовано: 12 августа 2025 • Автор: Pechenie-Sudby.ru</div>
+          <p class="blog-excerpt">Как предсказания о настроении могут помочь в борьбе со стрессом и поддержании положительного эмоционального состояния.</p>
+          <a href="/blog/predskazaniya-o-nastroenii" class="read-more">Читать далее →</a>
+        </div>
+      </article>
+
+      <!-- Мудрость -->
+      <article class="blog-card" data-category="wisdom">
+        <div class="category-badge badge-wisdom">Мудрость</div>
+        <div class="blog-card-image">🧠</div>
+        <div class="blog-card-content">
+          <h2><a href="/blog/mudrye-predskazaniya" style="color: inherit; text-decoration: none;">Мудрые предсказания: советы для жизни</a></h2>
+          <div class="blog-meta">Опубликовано: 10 августа 2025 • Автор: Pechenie-Sudby.ru</div>
+          <p class="blog-excerpt">Как мудрые предсказания могут помочь в принятии важных решений и развитии личностных качеств для успешной жизни.</p>
+          <a href="/blog/mudrye-predskazaniya" class="read-more">Читать далее →</a>
+        </div>
+      </article>
+
+      <!-- Успех -->
+      <article class="blog-card" data-category="luck">
+        <div class="category-badge badge-luck">Успех</div>
+        <div class="blog-card-image">🎯</div>
+        <div class="blog-card-content">
+          <h2><a href="/blog/predskazaniya-ob-uspehe" style="color: inherit; text-decoration: none;">Предсказания об успехе: как достичь целей</a></h2>
+          <div class="blog-meta">Опубликовано: 8 августа 2025 • Автор: Pechenie-Sudby.ru</div>
+          <p class="blog-excerpt">Как предсказания об успехе могут мотивировать к достижению целей и реализации вашего потенциала в разных сферах жизни.</p>
+          <a href="/blog/predskazaniya-ob-uspehe" class="read-more">Читать далее →</a>
+        </div>
+      </article>
+    </div>
+
+    <footer class="blog-footer">
+      <p>© 2025 Pechenie-Sudby.ru - Все права защищены</p>
+      <p>🥠 Откройте свое виртуальное печенье с предсказанием на <a href="/" style="color: var(--primary-color);">главной странице</a></p>
+    </footer>
+  </div>
+
+  <script>
+    // Функция для переключения темы
+    function toggleTheme() {
+      document.body.classList.toggle('dark-theme');
+      const isDark = document.body.classList.contains('dark-theme');
+      localStorage.setItem('darkTheme', isDark);
+      document.getElementById('themeToggle').textContent = isDark ? '☀️' : '🌙';
+    }
+    
+    // Функция для фильтрации статей по категориям
+    function filterArticles(category) {
+      const articles = document.querySelectorAll('.blog-card');
+      
+      articles.forEach(article => {
+        if (category === 'all' || article.getAttribute('data-category') === category) {
+          article.style.display = 'block';
+        } else {
+          article.style.display = 'none';
+        }
+      });
+    }
+    
+    // Инициализация при загрузке
+    document.addEventListener('DOMContentLoaded', function() {
+      const isDark = localStorage.getItem('darkTheme') === 'true';
+      if (isDark) {
+        document.body.classList.add('dark-theme');
+        document.getElementById('themeToggle').textContent = '☀️';
+      }
+      
+      // Добавляем обработчик для переключения темы
+      document.getElementById('themeToggle').addEventListener('click', toggleTheme);
+      
+      // Добавляем обработчики для категорий
+      const categories = document.querySelectorAll('.category');
+      categories.forEach(category => {
+        category.addEventListener('click', function() {
+          categories.forEach(c => c.classList.remove('active'));
+          this.classList.add('active');
+          
+          // Определяем категорию для фильтрации
+          let filterCategory = 'all';
+          if (this.classList.contains('finance')) filterCategory = 'finance';
+          if (this.classList.contains('love')) filterCategory = 'love';
+          if (this.classList.contains('work')) filterCategory = 'work';
+          if (this.classList.contains('health')) filterCategory = 'health';
+          if (this.classList.contains('luck')) filterCategory = 'luck';
+          if (this.classList.contains('mood')) filterCategory = 'mood';
+          if (this.classList.contains('wisdom')) filterCategory = 'wisdom';
+          
+          // Фильтруем статьи
+          filterArticles(filterCategory);
+        });
+      });
+    });
+  </script>
+</body>
+</html>
